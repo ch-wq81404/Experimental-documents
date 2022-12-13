@@ -114,7 +114,7 @@ public class TraceUtil {
 				
 				rules.add(String.format(rule, prefix,prefix,XMIUtil.getTaggedValueByTag("ea_targetName", values),prefix,
 						XMIUtil.getTaggedValueByTag("ea_sourceName", values),prefix));
-				System.out.println(rules.get(rules.size()-1));
+				MyLogger.LOGGER.info(rules.get(rules.size()-1));
 			}
 			else{
 				MyLogger.LOGGER.error("'trace' should link from Requirement to Block in req.");

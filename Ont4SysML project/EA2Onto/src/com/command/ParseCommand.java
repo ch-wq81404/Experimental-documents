@@ -42,10 +42,12 @@ public class ParseCommand {
 
 		else if (a == 2 && args[0].equals("-t")) {
 			File file = new File(args[1]);
+			
 			if (!file.exists()) {
 				System.out.println("File does not exist: " + args[1]);
 				return;
 			}
+			String _name=file.getName();
 			XMI xmi = ParseUtil.parseXMI(file);
 			String rootPath = System.getProperty("user.dir");
 			OntoGenerator g = new OntoGenerator();
@@ -58,10 +60,12 @@ public class ParseCommand {
 				ActMapper.map(xmi, g);
 				Checker.ActObjectCheck(xmi, g);
 				StmMapper.map(xmi, g);
+				System.out.println("Start check and specify");
 				Checker.SysMLEdgeCheck(xmi, g);
 				TraceUtil.specifyTrace(xmi, g);
+				System.out.println("Check and specify over.");
 				addValue(g);
-				String name = args[1].substring(args[1].lastIndexOf("\\"), args[1].length() - 4);
+				String name = _name.substring(0, _name.length() - 4);
 				g.saveAsFile(System.getProperty("user.dir") + "\\generate\\" + name + ".owl");
 			} catch (OWLOntologyCreationException | OWLOntologyStorageException | SWRLParseException
 					| SWRLBuiltInException | IOException e) {
@@ -77,7 +81,7 @@ public class ParseCommand {
 				System.out.println("File does not exist: " + args[1]);
 				return;
 			}
-			System.out.println(args[1]);
+//			System.out.println(args[1]);
 			OntoGenerator g = new OntoGenerator();
 			try{
 				g.init(file);

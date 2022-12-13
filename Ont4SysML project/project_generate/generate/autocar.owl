@@ -52,6 +52,15 @@
     
 
 
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#before -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#before">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:comment>初步记录结点之间的顺序，由规则推导，具有传递性</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#dempose -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#dempose">
@@ -193,6 +202,7 @@
     <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#hasObject -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#hasObject">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#hasOtherItem"/>
         <rdfs:comment>object flow has object</rdfs:comment>
     </owl:ObjectProperty>
     
@@ -494,6 +504,7 @@ isPartOf(?a, ?b) = T , if a is a part of b</rdfs:comment>
                 </owl:oneOf>
             </rdfs:Datatype>
         </rdfs:range>
+        <rdfs:comment>value’s type</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -502,6 +513,7 @@ isPartOf(?a, ?b) = T , if a is a part of b</rdfs:comment>
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#RuleValue">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>value&apos;s rule</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -602,6 +614,7 @@ isPartOf(?a, ?b) = T , if a is a part of b</rdfs:comment>
     <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#hasValueType -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#hasValueType">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#hasValue"/>
         <rdfs:range>
             <rdfs:Datatype>
                 <owl:oneOf>
@@ -807,6 +820,7 @@ isPartOf(?a, ?b) = T , if a is a part of b</rdfs:comment>
 
     <owl:Class rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#BusinessValue">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Value"/>
+        <rdfs:comment>商业价值观</rdfs:comment>
     </owl:Class>
     
 
@@ -934,6 +948,7 @@ isPartOf(?a, ?b) = T , if a is a part of b</rdfs:comment>
 
     <owl:Class rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#HumanValue">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Value"/>
+        <rdfs:comment>人类价值观</rdfs:comment>
     </owl:Class>
     
 
@@ -1234,7 +1249,9 @@ isPartOf(?a, ?b) = T , if a is a part of b</rdfs:comment>
 
     <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Value -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Value"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Value">
+        <rdfs:comment>价值观</rdfs:comment>
+    </owl:Class>
     
 
 
@@ -1256,6 +1273,28 @@ isPartOf(?a, ?b) = T , if a is a part of b</rdfs:comment>
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Accept_End_Vehicle -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Accept_End_Vehicle">
+        <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Event"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#InEvent"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SysMLNode"/>
+        <hasXmiID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EAID_8D4BD7C7_A946_4eb5_BE59_F88F4A758098</hasXmiID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Accept_Start_Vehicle -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Accept_Start_Vehicle">
+        <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Event"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#InEvent"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SysMLNode"/>
+        <hasXmiID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EAID_E40C965F_453A_4661_A05F_304F06B57728</hasXmiID>
+    </owl:NamedIndividual>
     
 
 
@@ -1371,7 +1410,7 @@ isPartOf(?a, ?b) = T , if a is a part of b</rdfs:comment>
         <hasNode rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#B1.1.1"/>
         <hasNode rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#B1.1.2"/>
         <hasNode rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#B1.2.1"/>
-        <hasNode rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#B1.2.3"/>
+        <hasNode rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#B1.2.2"/>
         <hasNode rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#B1.3.1"/>
         <hasNode rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#B1.3.2"/>
         <hasNode rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#B1.3.3"/>
@@ -1391,7 +1430,7 @@ isPartOf(?a, ?b) = T , if a is a part of b</rdfs:comment>
         <hasRequirement rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#B1.1.1"/>
         <hasRequirement rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#B1.1.2"/>
         <hasRequirement rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#B1.2.1"/>
-        <hasRequirement rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#B1.2.3"/>
+        <hasRequirement rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#B1.2.2"/>
         <hasRequirement rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#B1.3.1"/>
         <hasRequirement rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#B1.3.2"/>
         <hasRequirement rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#B1.3.3"/>
@@ -1449,7 +1488,6 @@ isPartOf(?a, ?b) = T , if a is a part of b</rdfs:comment>
         <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#BlockSubReqt"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Requirement"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SysMLNode"/>
-        <trace rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#mapserversubsystem"/>
         <trace rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#planningsubsystem"/>
         <hasReqtID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">B1.2.1</hasReqtID>
         <hasReqtName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Local Map</hasReqtName>
@@ -1459,15 +1497,15 @@ isPartOf(?a, ?b) = T , if a is a part of b</rdfs:comment>
     
 
 
-    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#B1.2.3 -->
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#B1.2.2 -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#B1.2.3">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#B1.2.2">
         <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#BlockSubReqt"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Requirement"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SysMLNode"/>
         <trace rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#mapserversubsystem"/>
         <trace rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#planningsubsystem"/>
-        <hasReqtID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">B1.2.3</hasReqtID>
+        <hasReqtID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">B1.2.2</hasReqtID>
         <hasReqtName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Global Map</hasReqtName>
         <hasReqtValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;memo&gt;#NOTES#Global map shall be used to roughly plan a path from start to destination.</hasReqtValue>
         <hasXmiID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EAID_2E683776_C5BB_401a_8947_0FE9F4933D66</hasXmiID>
@@ -1585,7 +1623,7 @@ isPartOf(?a, ?b) = T , if a is a part of b</rdfs:comment>
         <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Requirement"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SysMLNode"/>
         <hasReqtID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">B1.5.2</hasReqtID>
-        <hasReqtName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vehicle platform</hasReqtName>
+        <hasReqtName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vehicle Platform</hasReqtName>
         <hasReqtValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;memo&gt;#NOTES#The vehicle shall stabilize the platform as the trajectory is followed.</hasReqtValue>
         <hasXmiID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EAID_56C727FE_CD63_42b8_B9C5_2DB19103FBD7</hasXmiID>
     </owl:NamedIndividual>
@@ -1596,6 +1634,7 @@ isPartOf(?a, ?b) = T , if a is a part of b</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#BroadCast_End_Vehicle">
         <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Event"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#OutEvent"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SysMLNode"/>
         <mapToBF rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#broadcast_end_vehicle"/>
         <mappingEdge rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#broadcast_end_vehicle"/>
@@ -1608,6 +1647,7 @@ isPartOf(?a, ?b) = T , if a is a part of b</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#BroadCast_Start_Vehicle">
         <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Event"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#OutEvent"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SysMLNode"/>
         <mapToBF rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#broadcast_start_vehicle"/>
         <mappingEdge rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#broadcast_start_vehicle"/>
@@ -1623,6 +1663,17 @@ isPartOf(?a, ?b) = T , if a is a part of b</rdfs:comment>
         <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SplitNode"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SysMLNode"/>
         <hasXmiID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EAID_07EF1A69_37F9_4661_8629_9C7BC1F822D1</hasXmiID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Choice1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Choice1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SpecialNode"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SplitNode"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SysMLNode"/>
+        <hasXmiID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EAID_10571175_3CCC_452c_B2D1_FD546AC79E5D</hasXmiID>
     </owl:NamedIndividual>
     
 
@@ -1646,7 +1697,7 @@ isPartOf(?a, ?b) = T , if a is a part of b</rdfs:comment>
         <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#ObjectFlow"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SysMLEdge"/>
         <hasSource rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#BroadCast_Start_Vehicle"/>
-        <hasTarget rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Start_Vehicle"/>
+        <hasTarget rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Accept_Start_Vehicle"/>
     </owl:NamedIndividual>
     
 
@@ -1657,8 +1708,21 @@ isPartOf(?a, ?b) = T , if a is a part of b</rdfs:comment>
         <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#IntraDiagramEdge"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#ObjectFlow"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SysMLEdge"/>
-        <hasSource rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Get_Destination"/>
-        <hasTarget rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Gene_Digital_Map_Detail"/>
+        <hasGuard rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#ControlFlow10Guard"/>
+        <hasOtherItem rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#ControlFlow10Guard"/>
+        <hasSource rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Accept_Start_Vehicle"/>
+        <hasTarget rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Start_Vehicle"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#ControlFlow10Guard -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#ControlFlow10Guard">
+        <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Guard"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SysMLOtherItem"/>
+        <hasGuardValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is_start()==false</hasGuardValue>
+        <hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is_start()==false</hasValue>
     </owl:NamedIndividual>
     
 
@@ -1669,8 +1733,8 @@ isPartOf(?a, ?b) = T , if a is a part of b</rdfs:comment>
         <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#IntraDiagramEdge"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#ObjectFlow"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SysMLEdge"/>
-        <hasSource rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Perceive_Environment_AutoCar"/>
-        <hasTarget rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#FlowFinal3"/>
+        <hasSource rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Get_Digital_Map"/>
+        <hasTarget rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Get_Destination"/>
     </owl:NamedIndividual>
     
 
@@ -1681,8 +1745,8 @@ isPartOf(?a, ?b) = T , if a is a part of b</rdfs:comment>
         <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#IntraDiagramEdge"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#ObjectFlow"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SysMLEdge"/>
-        <hasSource rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Derive_Global_Costmap"/>
-        <hasTarget rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Derive_Local_Costmap"/>
+        <hasSource rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Get_Destination"/>
+        <hasTarget rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Gene_Digital_Map_Detail"/>
     </owl:NamedIndividual>
     
 
@@ -1693,8 +1757,8 @@ isPartOf(?a, ?b) = T , if a is a part of b</rdfs:comment>
         <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#IntraDiagramEdge"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#ObjectFlow"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SysMLEdge"/>
-        <hasSource rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Gene_Digital_Map_Detail"/>
-        <hasTarget rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Gene_Destination_Point"/>
+        <hasSource rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#End_Vehicle"/>
+        <hasTarget rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#ActivityFinal5"/>
     </owl:NamedIndividual>
     
 
@@ -1705,8 +1769,8 @@ isPartOf(?a, ?b) = T , if a is a part of b</rdfs:comment>
         <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#IntraDiagramEdge"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#ObjectFlow"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SysMLEdge"/>
-        <hasSource rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#End_Vehicle"/>
-        <hasTarget rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#ActivityFinal5"/>
+        <hasSource rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Accept_End_Vehicle"/>
+        <hasTarget rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#End_Vehicle"/>
     </owl:NamedIndividual>
     
 
@@ -1717,8 +1781,8 @@ isPartOf(?a, ?b) = T , if a is a part of b</rdfs:comment>
         <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#IntraDiagramEdge"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#ObjectFlow"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SysMLEdge"/>
-        <hasSource rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Control_Actuators"/>
-        <hasTarget rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#End_Vehicle"/>
+        <hasSource rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Perceive_Environment_AutoCar"/>
+        <hasTarget rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#FlowFinal3"/>
     </owl:NamedIndividual>
     
 
@@ -1729,8 +1793,8 @@ isPartOf(?a, ?b) = T , if a is a part of b</rdfs:comment>
         <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#IntraDiagramEdge"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#ObjectFlow"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SysMLEdge"/>
-        <hasSource rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Start_Vehicle"/>
-        <hasTarget rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Control_Actuators"/>
+        <hasSource rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Derive_Global_Costmap"/>
+        <hasTarget rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Derive_Local_Costmap"/>
     </owl:NamedIndividual>
     
 
@@ -1741,8 +1805,8 @@ isPartOf(?a, ?b) = T , if a is a part of b</rdfs:comment>
         <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#IntraDiagramEdge"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#ObjectFlow"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SysMLEdge"/>
-        <hasSource rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Control_Actuators"/>
-        <hasTarget rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Control_Actuators"/>
+        <hasSource rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Gene_Digital_Map_Detail"/>
+        <hasTarget rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Gene_Destination_Point"/>
     </owl:NamedIndividual>
     
 
@@ -1753,8 +1817,20 @@ isPartOf(?a, ?b) = T , if a is a part of b</rdfs:comment>
         <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#IntraDiagramEdge"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#ObjectFlow"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SysMLEdge"/>
-        <hasSource rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Gene_Destination_Point"/>
-        <hasTarget rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#FlowFinal6"/>
+        <hasSource rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Control_Actuators"/>
+        <hasTarget rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Accept_End_Vehicle"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#ControlFlow19 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#ControlFlow19">
+        <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#IntraDiagramEdge"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#ObjectFlow"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SysMLEdge"/>
+        <hasSource rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Control_Actuators"/>
+        <hasTarget rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Control_Actuators"/>
     </owl:NamedIndividual>
     
 
@@ -1765,8 +1841,33 @@ isPartOf(?a, ?b) = T , if a is a part of b</rdfs:comment>
         <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#IntraDiagramEdge"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#ObjectFlow"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SysMLEdge"/>
+        <hasGuard rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#ControlFlow2Guard"/>
+        <hasOtherItem rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#ControlFlow2Guard"/>
         <hasSource rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#BroadCast_Start_Vehicle"/>
         <hasTarget rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Gene_Trajectory"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#ControlFlow20 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#ControlFlow20">
+        <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#IntraDiagramEdge"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#ObjectFlow"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SysMLEdge"/>
+        <hasSource rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Gene_Destination_Point"/>
+        <hasTarget rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#FlowFinal6"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#ControlFlow2Guard -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#ControlFlow2Guard">
+        <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Guard"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SysMLOtherItem"/>
+        <hasGuardValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is_start()==true</hasGuardValue>
+        <hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is_start()==true</hasValue>
     </owl:NamedIndividual>
     
 
@@ -1802,7 +1903,7 @@ isPartOf(?a, ?b) = T , if a is a part of b</rdfs:comment>
         <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#ObjectFlow"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SysMLEdge"/>
         <hasSource rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#BroadCast_End_Vehicle"/>
-        <hasTarget rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#End_Vehicle"/>
+        <hasTarget rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Accept_End_Vehicle"/>
     </owl:NamedIndividual>
     
 
@@ -1888,8 +1989,8 @@ isPartOf(?a, ?b) = T , if a is a part of b</rdfs:comment>
         <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#IntraDiagramEdge"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#ObjectFlow"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SysMLEdge"/>
-        <hasSource rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Get_Digital_Map"/>
-        <hasTarget rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Get_Destination"/>
+        <hasSource rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Start_Vehicle"/>
+        <hasTarget rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Control_Actuators"/>
     </owl:NamedIndividual>
     
 
@@ -1911,6 +2012,10 @@ isPartOf(?a, ?b) = T , if a is a part of b</rdfs:comment>
         <hasAction rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Control_Actuators"/>
         <hasAction rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#End_Vehicle"/>
         <hasAction rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Start_Vehicle"/>
+        <hasEvent rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Accept_End_Vehicle"/>
+        <hasEvent rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Accept_Start_Vehicle"/>
+        <hasNode rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Accept_End_Vehicle"/>
+        <hasNode rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Accept_Start_Vehicle"/>
         <hasNode rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Control_Actuators"/>
         <hasNode rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#End_Vehicle"/>
         <hasNode rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Start_Vehicle"/>
@@ -1937,12 +2042,7 @@ isPartOf(?a, ?b) = T , if a is a part of b</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Control_Actuators">
         <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Action"/>
-        <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SysMLDiagram"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SysMLNode"/>
-        <hasEdge rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#control_actuators"/>
-        <hasGeneralization rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#control_actuators"/>
-        <hasNode rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#control_actuators"/>
-        <hasState rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#control_actuators"/>
         <mapToBF rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#control_actuators"/>
         <mappingEdge rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#control_actuators"/>
         <hasXmiID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EAID_E33CEAAB_EC81_4cff_8464_8802C6DD052B</hasXmiID>
@@ -2079,6 +2179,7 @@ isPartOf(?a, ?b) = T , if a is a part of b</rdfs:comment>
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#DestinationPoint">
         <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Object"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SysMLOtherItem"/>
+        <hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MapPoint</hasValue>
         <hasValueType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MapPoint</hasValueType>
     </owl:NamedIndividual>
     
@@ -2089,6 +2190,7 @@ isPartOf(?a, ?b) = T , if a is a part of b</rdfs:comment>
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#DigitalMapDetails">
         <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Object"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SysMLOtherItem"/>
+        <hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Map</hasValue>
         <hasValueType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Map</hasValueType>
     </owl:NamedIndividual>
     
@@ -2110,8 +2212,8 @@ isPartOf(?a, ?b) = T , if a is a part of b</rdfs:comment>
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Do_in_Sense_the_environment_and_the_vehicle">
         <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Do"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SysMLOtherItem"/>
-        <hasDoValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">perceive_environment_autocar</hasDoValue>
-        <hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">perceive_environment_autocar</hasValue>
+        <hasDoValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">perceive_environment_autoCar</hasDoValue>
+        <hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">perceive_environment_autoCar</hasValue>
     </owl:NamedIndividual>
     
 
@@ -2123,7 +2225,7 @@ isPartOf(?a, ?b) = T , if a is a part of b</rdfs:comment>
         <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SysMLNode"/>
         <mapToBF rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#end_vehicle"/>
         <mappingEdge rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#end_vehicle"/>
-        <hasXmiID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EAID_8D4BD7C7_A946_4eb5_BE59_F88F4A758098</hasXmiID>
+        <hasXmiID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EAID_64593545_5373_4bff_A0BA_222121FB0B03</hasXmiID>
     </owl:NamedIndividual>
     
 
@@ -2285,6 +2387,7 @@ isPartOf(?a, ?b) = T , if a is a part of b</rdfs:comment>
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#GlobalPath">
         <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Object"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SysMLOtherItem"/>
+        <hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Path</hasValue>
         <hasValueType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Path</hasValueType>
     </owl:NamedIndividual>
     
@@ -2308,12 +2411,10 @@ isPartOf(?a, ?b) = T , if a is a part of b</rdfs:comment>
         <hasAction rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Gene_Digital_Map_Detail"/>
         <hasAction rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Get_Destination"/>
         <hasAction rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Get_Digital_Map"/>
-        <hasAction rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SendSignal1"/>
         <hasNode rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Gene_Destination_Point"/>
         <hasNode rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Gene_Digital_Map_Detail"/>
         <hasNode rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Get_Destination"/>
         <hasNode rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Get_Digital_Map"/>
-        <hasNode rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SendSignal1"/>
         <hasXmiID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EAID_E30E7780_6405_402d_BAE4_39A567889BDE</hasXmiID>
     </owl:NamedIndividual>
     
@@ -2412,16 +2513,6 @@ isPartOf(?a, ?b) = T , if a is a part of b</rdfs:comment>
     
 
 
-    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#LocalMapDetails -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#LocalMapDetails">
-        <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Object"/>
-        <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SysMLOtherItem"/>
-        <hasValueType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Map</hasValueType>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#MapServerSubsystem -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#MapServerSubsystem">
@@ -2505,6 +2596,7 @@ isPartOf(?a, ?b) = T , if a is a part of b</rdfs:comment>
         <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#ObjectFlow"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SysMLEdge"/>
         <hasObject rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#localMapDetails"/>
+        <hasOtherItem rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#localMapDetails"/>
         <hasSource rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Derive_Local_Costmap"/>
         <hasTarget rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Gene_Trajectory"/>
     </owl:NamedIndividual>
@@ -2518,6 +2610,7 @@ isPartOf(?a, ?b) = T , if a is a part of b</rdfs:comment>
         <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#ObjectFlow"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SysMLEdge"/>
         <hasObject rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#DestinationPoint"/>
+        <hasOtherItem rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#DestinationPoint"/>
         <hasSource rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Gene_Destination_Point"/>
         <hasTarget rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Derive_Global_Costmap"/>
     </owl:NamedIndividual>
@@ -2531,6 +2624,7 @@ isPartOf(?a, ?b) = T , if a is a part of b</rdfs:comment>
         <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#ObjectFlow"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SysMLEdge"/>
         <hasObject rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#GlobalPath"/>
+        <hasOtherItem rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#GlobalPath"/>
         <hasSource rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Gene_Offline_Path"/>
         <hasTarget rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Gene_Trajectory"/>
     </owl:NamedIndividual>
@@ -2544,6 +2638,7 @@ isPartOf(?a, ?b) = T , if a is a part of b</rdfs:comment>
         <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#ObjectFlow"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SysMLEdge"/>
         <hasObject rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#DigitalMapDetails"/>
+        <hasOtherItem rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#DigitalMapDetails"/>
         <hasSource rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Gene_Digital_Map_Detail"/>
         <hasTarget rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Derive_Global_Costmap"/>
     </owl:NamedIndividual>
@@ -2557,6 +2652,7 @@ isPartOf(?a, ?b) = T , if a is a part of b</rdfs:comment>
         <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#ObjectFlow"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SysMLEdge"/>
         <hasObject rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#globalCostMap"/>
+        <hasOtherItem rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#globalCostMap"/>
         <hasSource rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Derive_Global_Costmap"/>
         <hasTarget rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Gene_Offline_Path"/>
     </owl:NamedIndividual>
@@ -2570,6 +2666,7 @@ isPartOf(?a, ?b) = T , if a is a part of b</rdfs:comment>
         <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#ObjectFlow"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SysMLEdge"/>
         <hasObject rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#TrajectoryDetails"/>
+        <hasOtherItem rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#TrajectoryDetails"/>
         <hasSource rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Gene_Trajectory"/>
         <hasTarget rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Control_Actuators"/>
     </owl:NamedIndividual>
@@ -2583,6 +2680,7 @@ isPartOf(?a, ?b) = T , if a is a part of b</rdfs:comment>
         <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#ObjectFlow"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SysMLEdge"/>
         <hasObject rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#globalCostMap"/>
+        <hasOtherItem rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#globalCostMap"/>
         <hasSource rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Derive_Global_Costmap"/>
         <hasTarget rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Derive_Local_Costmap"/>
     </owl:NamedIndividual>
@@ -2596,6 +2694,7 @@ isPartOf(?a, ?b) = T , if a is a part of b</rdfs:comment>
         <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#ObjectFlow"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SysMLEdge"/>
         <hasObject rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#PerceptionDetails"/>
+        <hasOtherItem rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#PerceptionDetails"/>
         <hasSource rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Perceive_Environment_AutoCar"/>
         <hasTarget rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Gene_Trajectory"/>
     </owl:NamedIndividual>
@@ -2608,8 +2707,8 @@ isPartOf(?a, ?b) = T , if a is a part of b</rdfs:comment>
         <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#IntraDiagramEdge"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#ObjectFlow"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SysMLEdge"/>
-        <hasObject rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#LocalMapDetails"/>
         <hasObject rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#localMapDetails"/>
+        <hasOtherItem rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#localMapDetails"/>
         <hasSource rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Derive_Local_Costmap"/>
         <hasTarget rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Perceive_Environment_AutoCar"/>
     </owl:NamedIndividual>
@@ -2644,6 +2743,7 @@ isPartOf(?a, ?b) = T , if a is a part of b</rdfs:comment>
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#PerceptionDetails">
         <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Object"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SysMLOtherItem"/>
+        <hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Perception</hasValue>
         <hasValueType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Perception</hasValueType>
     </owl:NamedIndividual>
     
@@ -2739,16 +2839,6 @@ isPartOf(?a, ?b) = T , if a is a part of b</rdfs:comment>
     
 
 
-    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SendSignal1 -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SendSignal1">
-        <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Action"/>
-        <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SysMLNode"/>
-        <hasXmiID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EAID_DF1EBBAD_DCF9_4fa7_BB52_AF71150F52DD</hasXmiID>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Sense_the_environment_and_the_vehicle -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Sense_the_environment_and_the_vehicle">
@@ -2773,10 +2863,12 @@ isPartOf(?a, ?b) = T , if a is a part of b</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Start_Vehicle">
         <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Action"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SysMLEdge"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SysMLNode"/>
+        <hasSource rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#start_vehicle"/>
         <mapToBF rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#start_vehicle"/>
         <mappingEdge rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#start_vehicle"/>
-        <hasXmiID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EAID_E40C965F_453A_4661_A05F_304F06B57728</hasXmiID>
+        <hasXmiID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EAID_52371A22_B4E5_4e2f_A121_7859E88AA644</hasXmiID>
     </owl:NamedIndividual>
     
 
@@ -2797,6 +2889,7 @@ isPartOf(?a, ?b) = T , if a is a part of b</rdfs:comment>
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#TrajectoryDetails">
         <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Object"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SysMLOtherItem"/>
+        <hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Trajectory</hasValue>
         <hasValueType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Trajectory</hasValueType>
     </owl:NamedIndividual>
     
@@ -3467,6 +3560,7 @@ isPartOf(?a, ?b) = T , if a is a part of b</rdfs:comment>
         <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SysMLOtherItem"/>
         <mapToAN rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#BroadCast_End_Vehicle"/>
         <mappingEdge rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#BroadCast_End_Vehicle"/>
+        <hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">void</hasValue>
         <hasValueType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">void</hasValueType>
     </owl:NamedIndividual>
     
@@ -3479,6 +3573,7 @@ isPartOf(?a, ?b) = T , if a is a part of b</rdfs:comment>
         <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SysMLOtherItem"/>
         <mapToAN rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#BroadCast_Start_Vehicle"/>
         <mappingEdge rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#BroadCast_Start_Vehicle"/>
+        <hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">void</hasValue>
         <hasValueType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">void</hasValueType>
     </owl:NamedIndividual>
     
@@ -3488,11 +3583,10 @@ isPartOf(?a, ?b) = T , if a is a part of b</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#control_actuators">
         <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#BlockFunction"/>
-        <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SysMLEdge"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SysMLOtherItem"/>
-        <hasOtherItem rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Control_Actuators"/>
         <mapToAN rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Control_Actuators"/>
         <mappingEdge rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Control_Actuators"/>
+        <hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">void</hasValue>
         <hasValueType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">void</hasValueType>
     </owl:NamedIndividual>
     
@@ -3533,6 +3627,7 @@ isPartOf(?a, ?b) = T , if a is a part of b</rdfs:comment>
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#currentLocation">
         <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#BlockPara"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SysMLOtherItem"/>
+        <hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MapPoint</hasValue>
         <hasValueType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MapPoint</hasValueType>
     </owl:NamedIndividual>
     
@@ -3545,6 +3640,7 @@ isPartOf(?a, ?b) = T , if a is a part of b</rdfs:comment>
         <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SysMLOtherItem"/>
         <mapToAN rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Derive_Global_Costmap"/>
         <mappingEdge rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Derive_Global_Costmap"/>
+        <hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CostMap</hasValue>
         <hasValueType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CostMap</hasValueType>
     </owl:NamedIndividual>
     
@@ -3557,6 +3653,7 @@ isPartOf(?a, ?b) = T , if a is a part of b</rdfs:comment>
         <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SysMLOtherItem"/>
         <mapToAN rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Derive_Local_Costmap"/>
         <mappingEdge rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Derive_Local_Costmap"/>
+        <hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CostMap</hasValue>
         <hasValueType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CostMap</hasValueType>
     </owl:NamedIndividual>
     
@@ -3569,6 +3666,7 @@ isPartOf(?a, ?b) = T , if a is a part of b</rdfs:comment>
         <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SysMLOtherItem"/>
         <mapToAN rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#End_Vehicle"/>
         <mappingEdge rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#End_Vehicle"/>
+        <hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">void</hasValue>
         <hasValueType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">void</hasValueType>
     </owl:NamedIndividual>
     
@@ -3581,6 +3679,7 @@ isPartOf(?a, ?b) = T , if a is a part of b</rdfs:comment>
         <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SysMLOtherItem"/>
         <mapToAN rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Gene_Offline_Path"/>
         <mappingEdge rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Gene_Offline_Path"/>
+        <hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Path</hasValue>
         <hasValueType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Path</hasValueType>
     </owl:NamedIndividual>
     
@@ -3593,6 +3692,7 @@ isPartOf(?a, ?b) = T , if a is a part of b</rdfs:comment>
         <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SysMLOtherItem"/>
         <mapToAN rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Gene_Trajectory"/>
         <mappingEdge rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Gene_Trajectory"/>
+        <hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Trajectory</hasValue>
         <hasValueType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Trajectory</hasValueType>
     </owl:NamedIndividual>
     
@@ -3615,6 +3715,7 @@ isPartOf(?a, ?b) = T , if a is a part of b</rdfs:comment>
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#globalCostMap">
         <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Object"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SysMLOtherItem"/>
+        <hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CostMap</hasValue>
         <hasValueType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CostMap</hasValueType>
     </owl:NamedIndividual>
     
@@ -3632,11 +3733,23 @@ isPartOf(?a, ?b) = T , if a is a part of b</rdfs:comment>
     
 
 
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#is_start -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#is_start">
+        <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#BlockFunction"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SysMLOtherItem"/>
+        <hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Boolean</hasValue>
+        <hasValueType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Boolean</hasValueType>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#is_started -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#is_started">
         <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#BlockFunction"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SysMLOtherItem"/>
+        <hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Boolean</hasValue>
         <hasValueType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Boolean</hasValueType>
     </owl:NamedIndividual>
     
@@ -3647,6 +3760,7 @@ isPartOf(?a, ?b) = T , if a is a part of b</rdfs:comment>
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#localMapDetails">
         <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Object"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SysMLOtherItem"/>
+        <hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Map</hasValue>
         <hasValueType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Map</hasValueType>
     </owl:NamedIndividual>
     
@@ -3724,6 +3838,7 @@ isPartOf(?a, ?b) = T , if a is a part of b</rdfs:comment>
         <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SysMLOtherItem"/>
         <mapToAN rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Perceive_Environment_AutoCar"/>
         <mappingEdge rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Perceive_Environment_AutoCar"/>
+        <hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Perception</hasValue>
         <hasValueType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Perception</hasValueType>
     </owl:NamedIndividual>
     
@@ -3798,6 +3913,7 @@ isPartOf(?a, ?b) = T , if a is a part of b</rdfs:comment>
         <haveFunction rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#broadcast_start_vehicle"/>
         <haveFunction rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#gene_offline_path"/>
         <haveFunction rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#gene_trajectory"/>
+        <haveFunction rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#is_start"/>
         <havePara rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#currentLocation"/>
         <havePart rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#trajectorygeneration"/>
         <havePart rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#trajectorymanagement"/>
@@ -3834,9 +3950,13 @@ isPartOf(?a, ?b) = T , if a is a part of b</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#start_vehicle">
         <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#BlockFunction"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SysMLDiagram"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SysMLOtherItem"/>
+        <hasCommonRelation rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Start_Vehicle"/>
+        <hasEdge rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Start_Vehicle"/>
         <mapToAN rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Start_Vehicle"/>
         <mappingEdge rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Start_Vehicle"/>
+        <hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">void</hasValue>
         <hasValueType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">void</hasValueType>
     </owl:NamedIndividual>
     
@@ -3896,6 +4016,16 @@ isPartOf(?a, ?b) = T , if a is a part of b</rdfs:comment>
         <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#CommonRelation"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#IntraDiagramEdge"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SysMLEdge"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#value1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#value1">
+        <request rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#B1.1.1"/>
+        <RuleType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sequence</RuleType>
+        <RuleValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Get_Destination before Start_Vehicle</RuleValue>
     </owl:NamedIndividual>
     
 
@@ -4020,7 +4150,7 @@ isPartOf(?a, ?b) = T , if a is a part of b</rdfs:comment>
     <rdf:Description>
         <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I53</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I52</rdfs:label>
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
         <swrl:body>
             <rdf:Description>
@@ -4136,7 +4266,7 @@ isPartOf(?a, ?b) = T , if a is a part of b</rdfs:comment>
     <rdf:Description>
         <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I55</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I54</rdfs:label>
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
         <swrl:body>
             <rdf:Description>
@@ -4310,7 +4440,7 @@ isPartOf(?a, ?b) = T , if a is a part of b</rdfs:comment>
     <rdf:Description>
         <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I52</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I51</rdfs:label>
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
         <swrl:body>
             <rdf:Description>
@@ -4469,7 +4599,7 @@ isPartOf(?a, ?b) = T , if a is a part of b</rdfs:comment>
     <rdf:Description>
         <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I48</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I47</rdfs:label>
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
         <swrl:body>
             <rdf:Description>
@@ -4527,7 +4657,7 @@ isPartOf(?a, ?b) = T , if a is a part of b</rdfs:comment>
     <rdf:Description>
         <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I50</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I49</rdfs:label>
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
         <swrl:body>
             <rdf:Description>
@@ -4585,7 +4715,7 @@ isPartOf(?a, ?b) = T , if a is a part of b</rdfs:comment>
     <rdf:Description>
         <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I49</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I48</rdfs:label>
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
         <swrl:body>
             <rdf:Description>
@@ -4701,65 +4831,7 @@ isPartOf(?a, ?b) = T , if a is a part of b</rdfs:comment>
     <rdf:Description>
         <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I47</rdfs:label>
-        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
-        <swrl:body>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Requirement"/>
-                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/21926/ontologies/2021/9/TIM#r"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                        <rdf:first>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#PlanningSubsystem"/>
-                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/21926/ontologies/2021/9/TIM#i"/>
-                            </rdf:Description>
-                        </rdf:first>
-                        <rdf:rest>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                <rdf:first>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
-                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#hasReqtName"/>
-                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/21926/ontologies/2021/9/TIM#r"/>
-                                        <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Global Map</swrl:argument2>
-                                    </rdf:Description>
-                                </rdf:first>
-                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                            </rdf:Description>
-                        </rdf:rest>
-                    </rdf:Description>
-                </rdf:rest>
-            </rdf:Description>
-        </swrl:body>
-        <swrl:head>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#trace"/>
-                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/21926/ontologies/2021/9/TIM#r"/>
-                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/21926/ontologies/2021/9/TIM#i"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-            </rdf:Description>
-        </swrl:head>
-    </rdf:Description>
-    <rdf:Description>
-        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I51</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I50</rdfs:label>
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
         <swrl:body>
             <rdf:Description>
@@ -5185,52 +5257,6 @@ isPartOf(?a, ?b) = T , if a is a part of b</rdfs:comment>
     <rdf:Description>
         <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I9</rdfs:label>
-        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
-        <swrl:body>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#BlockFunction"/>
-                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#broadcast_end_vehicle"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-            </rdf:Description>
-        </swrl:body>
-        <swrl:head>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#mapToBF"/>
-                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#BroadCast_End_Vehicle"/>
-                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#broadcast_end_vehicle"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                        <rdf:first>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#mapToAN"/>
-                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#broadcast_end_vehicle"/>
-                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#BroadCast_End_Vehicle"/>
-                            </rdf:Description>
-                        </rdf:first>
-                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                    </rdf:Description>
-                </rdf:rest>
-            </rdf:Description>
-        </swrl:head>
-    </rdf:Description>
-    <rdf:Description>
-        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I34</rdfs:label>
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
         <swrl:body>
@@ -5317,6 +5343,52 @@ isPartOf(?a, ?b) = T , if a is a part of b</rdfs:comment>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I9</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#BlockFunction"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#broadcast_end_vehicle"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#mapToBF"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#BroadCast_End_Vehicle"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#broadcast_end_vehicle"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#mapToAN"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#broadcast_end_vehicle"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#BroadCast_End_Vehicle"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
             </rdf:Description>
         </swrl:head>
     </rdf:Description>
@@ -5599,7 +5671,7 @@ isPartOf(?a, ?b) = T , if a is a part of b</rdfs:comment>
     <rdf:Description>
         <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I17</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I18</rdfs:label>
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
         <swrl:body>
             <rdf:Description>
@@ -5634,7 +5706,7 @@ isPartOf(?a, ?b) = T , if a is a part of b</rdfs:comment>
                     <rdf:Description>
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
                         <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#hasTarget"/>
-                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#ControlFlow11"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#ControlFlow15"/>
                         <swrl:argument2 rdf:resource="http://www.semanticweb.org/21926/ontologies/2021/9/TIM#n"/>
                     </rdf:Description>
                 </rdf:first>
@@ -5685,52 +5757,6 @@ isPartOf(?a, ?b) = T , if a is a part of b</rdfs:comment>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-            </rdf:Description>
-        </swrl:head>
-    </rdf:Description>
-    <rdf:Description>
-        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I8</rdfs:label>
-        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
-        <swrl:body>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#BlockFunction"/>
-                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#broadcast_start_vehicle"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-            </rdf:Description>
-        </swrl:body>
-        <swrl:head>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#mapToBF"/>
-                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#BroadCast_Start_Vehicle"/>
-                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#broadcast_start_vehicle"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                        <rdf:first>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#mapToAN"/>
-                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#broadcast_start_vehicle"/>
-                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#BroadCast_Start_Vehicle"/>
-                            </rdf:Description>
-                        </rdf:first>
-                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                    </rdf:Description>
-                </rdf:rest>
             </rdf:Description>
         </swrl:head>
     </rdf:Description>
@@ -5823,6 +5849,52 @@ isPartOf(?a, ?b) = T , if a is a part of b</rdfs:comment>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I8</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#BlockFunction"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#broadcast_start_vehicle"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#mapToBF"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#BroadCast_Start_Vehicle"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#broadcast_start_vehicle"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#mapToAN"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#broadcast_start_vehicle"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#BroadCast_Start_Vehicle"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
             </rdf:Description>
         </swrl:head>
     </rdf:Description>
@@ -6197,53 +6269,7 @@ isPartOf(?a, ?b) = T , if a is a part of b</rdfs:comment>
     <rdf:Description>
         <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I1</rdfs:label>
-        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
-        <swrl:body>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#BlockFunction"/>
-                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#control_actuators"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-            </rdf:Description>
-        </swrl:body>
-        <swrl:head>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#mapToBF"/>
-                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Control_Actuators"/>
-                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#control_actuators"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                        <rdf:first>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#mapToAN"/>
-                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#control_actuators"/>
-                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Control_Actuators"/>
-                            </rdf:Description>
-                        </rdf:first>
-                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                    </rdf:Description>
-                </rdf:rest>
-            </rdf:Description>
-        </swrl:head>
-    </rdf:Description>
-    <rdf:Description>
-        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I18</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I17</rdfs:label>
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
         <swrl:body>
             <rdf:Description>
@@ -6278,7 +6304,7 @@ isPartOf(?a, ?b) = T , if a is a part of b</rdfs:comment>
                     <rdf:Description>
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
                         <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#hasTarget"/>
-                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#ControlFlow14"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#ControlFlow13"/>
                         <swrl:argument2 rdf:resource="http://www.semanticweb.org/21926/ontologies/2021/9/TIM#n"/>
                     </rdf:Description>
                 </rdf:first>
@@ -6324,11 +6350,57 @@ isPartOf(?a, ?b) = T , if a is a part of b</rdfs:comment>
                     <rdf:Description>
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
                         <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#hasTarget"/>
-                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#ControlFlow18"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#ControlFlow20"/>
                         <swrl:argument2 rdf:resource="http://www.semanticweb.org/21926/ontologies/2021/9/TIM#n"/>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I2</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#BlockFunction"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#control_actuators"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#mapToBF"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Control_Actuators"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#control_actuators"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#mapToAN"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#control_actuators"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Control_Actuators"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
             </rdf:Description>
         </swrl:head>
     </rdf:Description>
@@ -6616,52 +6688,6 @@ isPartOf(?a, ?b) = T , if a is a part of b</rdfs:comment>
     <rdf:Description>
         <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I7</rdfs:label>
-        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
-        <swrl:body>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#BlockFunction"/>
-                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#derive_global_costmap"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-            </rdf:Description>
-        </swrl:body>
-        <swrl:head>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#mapToBF"/>
-                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Derive_Global_Costmap"/>
-                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#derive_global_costmap"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                        <rdf:first>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#mapToAN"/>
-                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#derive_global_costmap"/>
-                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Derive_Global_Costmap"/>
-                            </rdf:Description>
-                        </rdf:first>
-                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                    </rdf:Description>
-                </rdf:rest>
-            </rdf:Description>
-        </swrl:head>
-    </rdf:Description>
-    <rdf:Description>
-        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Q1</rdfs:label>
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
         <swrl:body>
@@ -6708,6 +6734,52 @@ isPartOf(?a, ?b) = T , if a is a part of b</rdfs:comment>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I7</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#BlockFunction"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#derive_global_costmap"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#mapToBF"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Derive_Global_Costmap"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#derive_global_costmap"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#mapToAN"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#derive_global_costmap"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Derive_Global_Costmap"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
             </rdf:Description>
         </swrl:head>
     </rdf:Description>
@@ -6797,7 +6869,7 @@ isPartOf(?a, ?b) = T , if a is a part of b</rdfs:comment>
     <rdf:Description>
         <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I0</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I1</rdfs:label>
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
         <swrl:body>
             <rdf:Description>
@@ -6981,7 +7053,7 @@ isPartOf(?a, ?b) = T , if a is a part of b</rdfs:comment>
     <rdf:Description>
         <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I2</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I0</rdfs:label>
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
         <swrl:body>
             <rdf:Description>
@@ -7027,7 +7099,7 @@ isPartOf(?a, ?b) = T , if a is a part of b</rdfs:comment>
     <rdf:Description>
         <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I54</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I53</rdfs:label>
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
         <swrl:body>
             <rdf:Description>

@@ -1,4 +1,4 @@
-AutoCar.EAP: which can be opened in EA, to modeling trajectory planning system.
+AutoCar_pure.EAP: which can be opened in EA, to modeling trajectory planning system.
 PCS.pdf: in which the production cell system model is detailed.
 
 autocar.xml: exported from AutoCar.EAP.

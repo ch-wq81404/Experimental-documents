@@ -1,55 +1,9 @@
-2022-11-28 19:45:55[WARN]  Block 'TIM:HMISubsystem' have no individuals. But it better have
-2022-11-28 19:45:55[INFO]  Create rule: TIM:BlockFunction(TIM:end_vehicle)->TIM:mapToBF(TIM:End_Vehicle,TIM:end_vehicle)^TIM:mapToAN(TIM:end_vehicle,TIM:End_Vehicle)
-2022-11-28 19:45:55[INFO]  Create rule: TIM:BlockFunction(TIM:control_actuators)->TIM:mapToBF(TIM:Control_Actuators,TIM:control_actuators)^TIM:mapToAN(TIM:control_actuators,TIM:Control_Actuators)
-2022-11-28 19:45:55[INFO]  Create rule: TIM:BlockFunction(TIM:start_vehicle)->TIM:mapToBF(TIM:Start_Vehicle,TIM:start_vehicle)^TIM:mapToAN(TIM:start_vehicle,TIM:Start_Vehicle)
-2022-11-28 19:45:55[INFO]  Create rule: TIM:BlockFunction(TIM:perceive_environment_autocar)->TIM:mapToBF(TIM:Perceive_Environment_AutoCar,TIM:perceive_environment_autocar)^TIM:mapToAN(TIM:perceive_environment_autocar,TIM:Perceive_Environment_AutoCar)
-2022-11-28 19:45:55[INFO]  Create rule: TIM:BlockFunction(TIM:derive_local_costmap)->TIM:mapToBF(TIM:Derive_Local_Costmap,TIM:derive_local_costmap)^TIM:mapToAN(TIM:derive_local_costmap,TIM:Derive_Local_Costmap)
-2022-11-28 19:45:55[INFO]  Create rule: TIM:BlockFunction(TIM:derive_global_costmap)->TIM:mapToBF(TIM:Derive_Global_Costmap,TIM:derive_global_costmap)^TIM:mapToAN(TIM:derive_global_costmap,TIM:Derive_Global_Costmap)
-2022-11-28 19:45:56[INFO]  Create rule: TIM:BlockFunction(TIM:get_digital_map)->TIM:mapToBF(TIM:Get_Digital_Map,TIM:get_digital_map)^TIM:mapToAN(TIM:get_digital_map,TIM:Get_Digital_Map)
-2022-11-28 19:45:56[WARN]  Block  'TIM:get_digital_map' doesn't exist.
-2022-11-28 19:45:56[INFO]  Create rule: TIM:BlockFunction(TIM:get_destination)->TIM:mapToBF(TIM:Get_Destination,TIM:get_destination)^TIM:mapToAN(TIM:get_destination,TIM:Get_Destination)
-2022-11-28 19:45:56[WARN]  Block  'TIM:get_destination' doesn't exist.
-2022-11-28 19:45:56[INFO]  Create rule: TIM:BlockFunction(TIM:gene_digital_map_detail)->TIM:mapToBF(TIM:Gene_Digital_Map_Detail,TIM:gene_digital_map_detail)^TIM:mapToAN(TIM:gene_digital_map_detail,TIM:Gene_Digital_Map_Detail)
-2022-11-28 19:45:56[WARN]  Block  'TIM:gene_digital_map_detail' doesn't exist.
-2022-11-28 19:45:56[INFO]  Create rule: TIM:BlockFunction(TIM:sendsignal1)->TIM:mapToBF(TIM:SendSignal1,TIM:sendsignal1)^TIM:mapToAN(TIM:sendsignal1,TIM:SendSignal1)
-2022-11-28 19:45:56[WARN]  Block  'TIM:sendsignal1' doesn't exist.
-2022-11-28 19:45:56[INFO]  Create rule: TIM:BlockFunction(TIM:gene_destination_point)->TIM:mapToBF(TIM:Gene_Destination_Point,TIM:gene_destination_point)^TIM:mapToAN(TIM:gene_destination_point,TIM:Gene_Destination_Point)
-2022-11-28 19:45:56[WARN]  Block  'TIM:gene_destination_point' doesn't exist.
-2022-11-28 19:45:56[INFO]  Create rule: TIM:BlockFunction(TIM:broadcast_start_vehicle)->TIM:mapToBF(TIM:BroadCast_Start_Vehicle,TIM:broadcast_start_vehicle)^TIM:mapToAN(TIM:broadcast_start_vehicle,TIM:BroadCast_Start_Vehicle)
-2022-11-28 19:45:56[INFO]  Create rule: TIM:BlockFunction(TIM:broadcast_end_vehicle)->TIM:mapToBF(TIM:BroadCast_End_Vehicle,TIM:broadcast_end_vehicle)^TIM:mapToAN(TIM:broadcast_end_vehicle,TIM:BroadCast_End_Vehicle)
-2022-11-28 19:45:56[INFO]  Create rule: TIM:BlockFunction(TIM:gene_trajectory)->TIM:mapToBF(TIM:Gene_Trajectory,TIM:gene_trajectory)^TIM:mapToAN(TIM:gene_trajectory,TIM:Gene_Trajectory)
-2022-11-28 19:45:56[INFO]  Create rule: TIM:BlockFunction(TIM:gene_offline_path)->TIM:mapToBF(TIM:Gene_Offline_Path,TIM:gene_offline_path)^TIM:mapToAN(TIM:gene_offline_path,TIM:Gene_Offline_Path)
-2022-11-28 19:45:56[INFO]  Create rule: TIM:SpecialNode(?n)^TIM:hasXmiID(?n,"EAID_2830AA32_F48D_4949_B76E_8518C4AE27E8")->TIM:hasSource(TIM:ControlFlow3,?n)
-2022-11-28 19:45:56[INFO]  Create rule: TIM:SpecialNode(?n)^TIM:hasXmiID(?n,"EAID_61B5FE0D_BD08_4dd4_A757_D5440F1B6D72")->TIM:hasTarget(TIM:ControlFlow4,?n)
-2022-11-28 19:45:56[INFO]  Create rule: TIM:SpecialNode(?n)^TIM:hasXmiID(?n,"EAID_48E50EC8_1FE5_4a98_843A_02857123DFA7")->TIM:hasSource(TIM:ControlFlow6,?n)
-2022-11-28 19:45:56[INFO]  Create rule: TIM:SpecialNode(?n)^TIM:hasXmiID(?n,"EAID_48E50EC8_1FE5_4a98_843A_02857123DFA7")->TIM:hasSource(TIM:ControlFlow7,?n)
-2022-11-28 19:45:56[INFO]  Create rule: TIM:SpecialNode(?n)^TIM:hasXmiID(?n,"EAID_48E50EC8_1FE5_4a98_843A_02857123DFA7")->TIM:hasTarget(TIM:ControlFlow8,?n)
-2022-11-28 19:45:56[INFO]  Create rule: TIM:SpecialNode(?n)^TIM:hasXmiID(?n,"EAID_AA18C772_F750_4f7f_9E12_450A6918097F")->TIM:hasTarget(TIM:ControlFlow11,?n)
-2022-11-28 19:45:56[INFO]  Create rule: TIM:SpecialNode(?n)^TIM:hasXmiID(?n,"EAID_E99756C3_A577_46e4_A9DF_C18656935898")->TIM:hasTarget(TIM:ControlFlow14,?n)
-2022-11-28 19:45:56[INFO]  Create rule: TIM:SpecialNode(?n)^TIM:hasXmiID(?n,"EAID_F4E98018_BF4E_4b01_BE83_9392FB72E73E")->TIM:hasTarget(TIM:ControlFlow18,?n)
-2022-11-28 19:45:58[ERROR]  The type of object passed by the action TIM:Derive_Local_Costmap is inconsistent with the type returned by the corresponding block function.
-2022-11-28 19:45:58[ERROR]  The type of object passed by the action TIM:Derive_Local_Costmap is inconsistent with the type returned by the corresponding block function.
-2022-11-28 19:45:58[ERROR]  The type of object passed by the action TIM:Derive_Local_Costmap is inconsistent with the type returned by the corresponding block function.
-2022-11-28 19:45:58[INFO]  Create rule: TIM:SpecialNode(?n)^TIM:hasXmiID(?n,"EAID_9BE11F47_5B2D_41e0_8B1E_162F35E57A11")->TIM:hasSource(TIM:Transition0,?n)
-2022-11-28 19:45:58[INFO]  Create rule: TIM:SpecialNode(?n)^TIM:hasXmiID(?n,"EAID_9BE11F47_5B2D_41e0_8B1E_162F35E57A11")->TIM:hasSource(TIM:Transition1,?n)
-2022-11-28 19:45:58[INFO]  Create rule: TIM:SpecialNode(?n)^TIM:hasXmiID(?n,"EAID_07EF1A69_37F9_4661_8629_9C7BC1F822D1")->TIM:hasSource(TIM:Transition3,?n)
-2022-11-28 19:45:58[INFO]  Create rule: TIM:SpecialNode(?n)^TIM:hasXmiID(?n,"EAID_07EF1A69_37F9_4661_8629_9C7BC1F822D1")->TIM:hasSource(TIM:Transition4,?n)
-2022-11-28 19:45:58[INFO]  Create rule: TIM:SpecialNode(?n)^TIM:hasXmiID(?n,"EAID_07EF1A69_37F9_4661_8629_9C7BC1F822D1")->TIM:hasTarget(TIM:Transition5,?n)
-2022-11-28 19:45:58[INFO]  Create rule: TIM:SpecialNode(?n)^TIM:hasXmiID(?n,"EAID_DCEEDBEE_D7EE_4f5d_B2FD_102D2499670C")->TIM:hasSource(TIM:Transition6,?n)
-2022-11-28 19:45:58[INFO]  Create rule: TIM:SpecialNode(?n)^TIM:hasXmiID(?n,"EAID_DD5BEB20_7E41_47e9_9C10_6D7B21DA6184")->TIM:hasSource(TIM:Transition12,?n)
-2022-11-28 19:45:58[INFO]  Create rule: TIM:SpecialNode(?n)^TIM:hasXmiID(?n,"EAID_DD5BEB20_7E41_47e9_9C10_6D7B21DA6184")->TIM:hasSource(TIM:Transition13,?n)
-2022-11-28 19:45:58[INFO]  Create rule: TIM:SpecialNode(?n)^TIM:hasXmiID(?n,"EAID_E21C9BE8_1023_497b_ABB7_117C3810DB41")->TIM:hasSource(TIM:Transition14,?n)
-2022-11-28 19:45:58[INFO]  Create rule: TIM:SpecialNode(?n)^TIM:hasXmiID(?n,"EAID_41D3509C_127F_434a_BE5E_B3B97AEAE046")->TIM:hasSource(TIM:Transition16,?n)
-2022-11-28 19:45:58[INFO]  Create rule: TIM:SpecialNode(?n)^TIM:hasXmiID(?n,"EAID_B86EF7A0_2BC6_402f_A4A6_74517E03B5E5")->TIM:hasSource(TIM:Transition17,?n)
-2022-11-28 19:45:58[INFO]  Create rule: TIM:SpecialNode(?n)^TIM:hasXmiID(?n,"EAID_DD5BEB20_7E41_47e9_9C10_6D7B21DA6184")->TIM:hasTarget(TIM:Transition18,?n)
-2022-11-28 19:45:58[INFO]  Create rule: TIM:SpecialNode(?n)^TIM:hasXmiID(?n,"EAID_DD5BEB20_7E41_47e9_9C10_6D7B21DA6184")->TIM:hasTarget(TIM:Transition19,?n)
-2022-11-28 19:45:58[INFO]  Create rule: TIM:SpecialNode(?n)^TIM:hasXmiID(?n,"EAID_B86EF7A0_2BC6_402f_A4A6_74517E03B5E5")->TIM:hasSource(TIM:Transition20,?n)
-2022-11-28 19:45:58[INFO]  Create rule: TIM:SpecialNode(?n)^TIM:hasXmiID(?n,"EAID_5BE4E7FF_F9DA_45a0_99E1_76368CF9C6BF")->TIM:hasSource(TIM:Transition21,?n)
-2022-11-28 19:45:58[INFO]  Create rule: TIM:SpecialNode(?n)^TIM:hasXmiID(?n,"EAID_888BD81D_3618_4535_B95C_B6290880C6C5")->TIM:hasTarget(TIM:Transition23,?n)
-2022-11-28 19:45:58[INFO]  Create rule: TIM:SpecialNode(?n)^TIM:hasXmiID(?n,"EAID_9BE11F47_5B2D_41e0_8B1E_162F35E57A11")->TIM:hasTarget(TIM:Transition25,?n)
-2022-11-28 19:45:58[INFO]  Create rule: TIM:SpecialNode(?n)^TIM:hasXmiID(?n,"EAID_BE323002_4769_49ab_8EF4_9712B9169A44")->TIM:hasTarget(TIM:Transition26,?n)
-2022-11-28 19:45:58[INFO]  Create rule: TIM:SpecialNode(?n)^TIM:hasXmiID(?n,"EAID_9BE11F47_5B2D_41e0_8B1E_162F35E57A11")->TIM:hasTarget(TIM:Transition27,?n)
-2022-11-28 19:45:58[INFO]  Create rule: TIM:SpecialNode(?n)^TIM:hasXmiID(?n,"EAID_B86EF7A0_2BC6_402f_A4A6_74517E03B5E5")->TIM:hasTarget(TIM:Transition28,?n)
-2022-11-28 19:45:58[INFO]  Create rule: TIM:SpecialNode(?n)^TIM:hasXmiID(?n,"EAID_B86EF7A0_2BC6_402f_A4A6_74517E03B5E5")->TIM:hasTarget(TIM:Transition29,?n)
-2022-11-28 19:45:58[INFO]  Create rule: TIM:SpecialNode(?n)^TIM:hasXmiID(?n,"EAID_9FC94C2C_7930_4005_94B0_193A1869F16B")->TIM:hasSource(TIM:Transition31,?n)
-2022-11-28 19:46:08[ERROR]  Edge TIM:costmapInput have more than 1 target: TIM:AutoCarBDD:TIM:planningsubsystem TIM:AutoCarBDD:TIM:perceptionsubsystem 
+2022-12-13 14:50:17[INFO]  There are 4 values to verify...
+2022-12-13 14:50:17[INFO]  Value value2 is verifying, whose rules are following: 
+2022-12-13 14:50:21[INFO]  Value value2 verification done. g_set={TIM:Gene_Offline_Path,CostMap,TIM:globalCostMap,TIM:ObjectFlow4,}, b_set={}.
+2022-12-13 14:50:21[INFO]  Value test is verifying, whose rules are following: 
+2022-12-13 14:50:24[INFO]  Value test verification done. g_set={TIM:Gene_Trajectory,TIM:BroadCast_Start_Vehicle,TIM:ControlFlow2,TIM:ControlFlow2Guard,is_start()==true,}, b_set={}.
+2022-12-13 14:51:14[INFO]  Value value1 is verifying, whose rules are following: 
+2022-12-13 14:52:31[INFO]  Value value1 verification done. g_set={TIM:Gene_Destination_Point,TIM:BroadCast_Start_Vehicle,TIM:Gene_Offline_Path,TIM:Derive_Global_Costmap,TIM:Start_Vehicle,TIM:Get_Destination,TIM:Accept_Start_Vehicle,TIM:Gene_Digital_Map_Detail,}, b_set={}.
+2022-12-13 14:52:31[INFO]  Value value3 is verifying, whose rules are following: 
+2022-12-13 14:52:41[INFO]  Value value3 verification done. g_set={Path,TIM:Gene_Trajectory,TIM:ObjectFlow7,TIM:PerceptionDetails,TIM:Gene_Offline_Path,TIM:ObjectFlow2,TIM:GlobalPath,Perception,TIM:Perceive_Environment_AutoCar,}, b_set={}.

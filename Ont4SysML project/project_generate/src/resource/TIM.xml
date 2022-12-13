@@ -32,6 +32,15 @@
     
 
 
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#before -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#before">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:comment>初步记录结点之间的顺序，由规则推导，具有传递性</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#dempose -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#dempose">
@@ -169,6 +178,7 @@
     <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#hasObject -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#hasObject">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#hasOtherItem"/>
         <rdfs:comment>object flow has object</rdfs:comment>
     </owl:ObjectProperty>
     
@@ -465,6 +475,7 @@ isPartOf(?a, ?b) = T , if a is a part of b</rdfs:comment>
                 </owl:oneOf>
             </rdfs:Datatype>
         </rdfs:range>
+        <rdfs:comment>value’s type</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -473,6 +484,7 @@ isPartOf(?a, ?b) = T , if a is a part of b</rdfs:comment>
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#RuleValue">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>value&apos;s rule</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -573,6 +585,7 @@ isPartOf(?a, ?b) = T , if a is a part of b</rdfs:comment>
     <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#hasValueType -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#hasValueType">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#hasValue"/>
         <rdfs:comment>指定了参数或对象的类型</rdfs:comment>
     </owl:DatatypeProperty>
     
@@ -694,6 +707,7 @@ isPartOf(?a, ?b) = T , if a is a part of b</rdfs:comment>
 
     <owl:Class rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#BusinessValue">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Value"/>
+        <rdfs:comment>商业价值观</rdfs:comment>
     </owl:Class>
     
 
@@ -792,6 +806,7 @@ isPartOf(?a, ?b) = T , if a is a part of b</rdfs:comment>
 
     <owl:Class rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#HumanValue">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Value"/>
+        <rdfs:comment>人类价值观</rdfs:comment>
     </owl:Class>
     
 
@@ -993,7 +1008,9 @@ isPartOf(?a, ?b) = T , if a is a part of b</rdfs:comment>
 
     <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Value -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Value"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Value">
+        <rdfs:comment>价值观</rdfs:comment>
+    </owl:Class>
     
 
 

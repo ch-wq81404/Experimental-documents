@@ -1,9 +1,9 @@
-2022-11-30 21:05:52[INFO]  There are 4 values to verify...
-2022-11-30 21:05:52[INFO]  Value value2 is verifying, whose rules are following: 
-2022-11-30 21:05:55[INFO]  Value value2 verification done. g_set={TIM:Gene_Offline_Path,CostMap,TIM:globalCostMap,TIM:ObjectFlow4,}, b_set={}.
-2022-11-30 21:05:55[INFO]  Value test is verifying, whose rules are following: 
-2022-11-30 21:05:59[INFO]  Value test verification done. g_set={TIM:Gene_Trajectory,TIM:BroadCast_Start_Vehicle,TIM:ControlFlow2,TIM:ControlFlow2Guard,is_start()==true,}, b_set={}.
-2022-11-30 21:05:59[INFO]  Value value1 is verifying, whose rules are following: 
-2022-11-30 21:07:11[INFO]  Value value1 verification done. g_set={TIM:Gene_Destination_Point,TIM:BroadCast_Start_Vehicle,TIM:Gene_Offline_Path,TIM:Derive_Global_Costmap,TIM:Start_Vehicle,TIM:Get_Destination,TIM:Accept_Start_Vehicle,TIM:Gene_Digital_Map_Detail,}, b_set={}.
-2022-11-30 21:07:11[INFO]  Value value3 is verifying, whose rules are following: 
-2022-11-30 21:07:20[INFO]  Value value3 verification done. g_set={Path,TIM:Gene_Trajectory,TIM:Gene_Offline_Path,TIM:ObjectFlow2,TIM:GlobalPath,}, b_set={TIM:Gene_Trajectory,TIM:Derive_Global_Costmap,Perception,}.
+2022-12-13 14:40:28[INFO]  There are 4 values to verify...
+2022-12-13 14:40:28[INFO]  Value value2 is verifying, whose rules are following: 
+2022-12-13 14:40:33[INFO]  Value value2 verification done. g_set={TIM:Gene_Offline_Path,CostMap,TIM:globalCostMap,TIM:ObjectFlow4,}, b_set={}.
+2022-12-13 14:40:33[INFO]  Value test is verifying, whose rules are following: 
+2022-12-13 14:40:37[INFO]  Value test verification done. g_set={TIM:Gene_Trajectory,TIM:BroadCast_Start_Vehicle,TIM:ControlFlow2,TIM:ControlFlow2Guard,is_start()==true,}, b_set={}.
+2022-12-13 14:40:37[INFO]  Value value1 is verifying, whose rules are following: 
+2022-12-13 14:42:00[INFO]  Value value1 verification done. g_set={TIM:Gene_Destination_Point,TIM:BroadCast_Start_Vehicle,TIM:Gene_Offline_Path,TIM:Derive_Global_Costmap,TIM:Start_Vehicle,TIM:Get_Destination,TIM:Accept_Start_Vehicle,TIM:Gene_Digital_Map_Detail,}, b_set={}.
+2022-12-13 14:42:00[INFO]  Value value3 is verifying, whose rules are following: 
+2022-12-13 14:42:10[INFO]  Value value3 verification done. g_set={Path,TIM:Gene_Trajectory,TIM:ObjectFlow7,TIM:PerceptionDetails,TIM:Gene_Offline_Path,TIM:ObjectFlow2,TIM:GlobalPath,Perception,TIM:Perceive_Environment_AutoCar,}, b_set={}.

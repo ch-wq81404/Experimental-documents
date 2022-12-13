@@ -25,8 +25,10 @@ public class ValueVerifier {
 	public static void valueVerify(OntoGenerator g) {
 		vg = g;
 		Set<String> values = g.getIndividualsOfClass("HumanValue");
+		System.out.println("There are " + values.size() + " values to verify...");
 		MyLogger.LOGGER.info("There are " + values.size() + " values to verify...");
 		for (String value : values) {
+			System.out.println("Value " + value + " is verifying, whose rules are following: ");
 			MyLogger.LOGGER.info("Value " + value + " is verifying, whose rules are following: ");
 			String type = g.getDataOfDataProperty(value, "RuleType").iterator().next();
 			Set<String> contents = g.getDataOfDataProperty(value, "RuleValue");
@@ -150,7 +152,7 @@ public class ValueVerifier {
 				default: {
 					rule = String.format(rules[1], shortPrefix, shortPrefix, source, shortPrefix, target, shortPrefix,
 							source, shortPrefix, target, shortPrefix, shortPrefix, target, shortPrefix, omegas[2]);
-					System.out.println(rule);
+//					System.out.println(rule);
 					rlts = vg.queryBySQWRL(rule, new String[] { "e", "o" });
 				}
 				}
@@ -158,7 +160,7 @@ public class ValueVerifier {
 			} else {
 				rule = String.format(rules[2], shortPrefix, source, shortPrefix, target, shortPrefix, shortPrefix,
 						target, source, shortPrefix, target, shortPrefix, shortPrefix, target, shortPrefix, omegas[2]);
-				System.out.println(rule);
+//				System.out.println(rule);
 				rlts = vg.queryBySQWRL(rule, new String[] { "t", "o" });
 			}
 
@@ -176,7 +178,7 @@ public class ValueVerifier {
 					rule = String.format(rules[4], shortPrefix, source, shortPrefix, shortPrefix, target, shortPrefix,
 							source, shortPrefix, source, target, shortPrefix, shortPrefix, target, shortPrefix,
 							omegas[2]);
-					System.out.println(rule);
+//					System.out.println(rule);
 					rlts = vg.queryBySQWRL(rule, new String[] { "s", "o" });
 				}
 				}
@@ -184,7 +186,7 @@ public class ValueVerifier {
 			} else {
 				rule = String.format(rules[5], shortPrefix, source, shortPrefix, target, shortPrefix, shortPrefix,
 						source, shortPrefix, target, shortPrefix, shortPrefix, target, shortPrefix, omegas[2]);
-				System.out.println(rule);
+//				System.out.println(rule);
 				rlts = vg.queryBySQWRL(rule, new String[] { "n", "o" });
 			}
 		}
@@ -209,6 +211,7 @@ public class ValueVerifier {
 			info += rlt + ",";
 		info += "}.";
 		MyLogger.LOGGER.info(info);
+		System.out.println(info);
 	}
 
 	@SuppressWarnings("unchecked")
@@ -224,7 +227,7 @@ public class ValueVerifier {
 		Set<String> rlt = new HashSet<>();
 		String rule = "%s:SysMLEdge(?e)^%s:hasTarget(?e,%s)^%s:hasObject(?e,?o)^%s:hasValueType(?o,\"%s\")->sqwrl:select(?e,?o)";
 		rule = String.format(rule, prefix, prefix, subject, prefix, prefix, type);
-		System.out.println(rule);
+//		System.out.println(rule);
 		List<String[]> rlts = vg.queryBySQWRL(rule, new String[] { "e", "o" });
 		for (String[] eo : rlts) {
 			rlt.add(eo[0]);
@@ -236,7 +239,9 @@ public class ValueVerifier {
 	private static Set<String> sequenceVerify(String source, String target) {
 		Set<String> rlt = new HashSet<>();
 		Set<String> path=new HashSet<>();
+		System.out.println("Searching path...");
 		dfs(source, target, rlt , path);
+		System.out.println("Done.");
 		return path;
 	}
 
@@ -252,7 +257,7 @@ public class ValueVerifier {
 		List<String> targets = vg.queryBySQWRL(rule, "a");
 		for (String t : targets) {
 			if (!flag.contains(t)) {
-				System.out.println(t);
+//				System.out.println(t);
 				flag.add(t);
 				rlt.add(t);
 				dfs(t, target, rlt, path);
